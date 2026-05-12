@@ -7,4 +7,8 @@ URL for the server stat project: https://roadmap.sh/projects/server-stats
 
 For the second project the log archive tool all you have to do is run the command ./;og_archive_tool.sh <log_directory> and the script should run perfectly.
 
-URL for the log archive project: https://roadmap.sh/projects/log-archive-tool 
+URL for the log archive project: https://roadmap.sh/projects/log-archive-tool
+
+For the third project the nginx log analyser tool all you have to do is run the command ./nginx_log_analyser <log_file> and the script should run perfectly. 
+
+URL for the log archive project: https://roadmap.sh/projects/nginx-log-analyser 
