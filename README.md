@@ -1,14 +1,63 @@
-# RoadMap_Projects
-A repo for the roadmap.sh projects for the devops roadmap
+# Astro Starter Kit: Blog
 
-For the first project the server stat bash script all you have to do is to just run the command ./server_stat.sh and the code should run perfectly.
+```sh
+npm create astro@latest -- --template blog
+```
 
-URL for the server stat project: https://roadmap.sh/projects/server-stats
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-For the second project the log archive tool all you have to do is run the command ./;og_archive_tool.sh <log_directory> and the script should run perfectly.
+Features:
 
-URL for the log archive project: https://roadmap.sh/projects/log-archive-tool
+- ✅ Minimal styling (make it your own!)
+- ✅ 100/100 Lighthouse performance
+- ✅ SEO-friendly with canonical URLs and Open Graph data
+- ✅ Sitemap support
+- ✅ RSS Feed support
+- ✅ Markdown & MDX support
 
-For the third project the nginx log analyser tool all you have to do is run the command ./nginx_log_analyser <log_file> and the script should run perfectly. 
+## 🚀 Project Structure
 
-URL for the log archive project: https://roadmap.sh/projects/nginx-log-analyser 
+Inside of your Astro project, you'll see the following folders and files:
+
+```text
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── content/
+│   ├── layouts/
+│   └── pages/
+├── astro.config.mjs
+├── README.md
+├── package.json
+└── tsconfig.json
+```
+
+Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+
+There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+
+The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+
+Any static assets, like images, can be placed in the `public/` directory.
+
+## 🧞 Commands
+
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Credit
+
+This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
