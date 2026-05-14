@@ -50,3 +50,21 @@ jobs:
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+
+deploy-roadmap-placeholder:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy Placeholder to EC2 via Rsync
+        uses: Burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avz --delete
+          path: /public/
+          remote_path: /var/www/placeholder-site/
+          remote_host: ${{ secrets.EC2_IP }}
+          remote_user: ec2-user
+          remote_key: ${{ secrets.EC2_SSH_KEY }}
