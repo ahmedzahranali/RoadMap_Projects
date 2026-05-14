@@ -14,13 +14,10 @@ concurrency:
 
 jobs:
   deploy:
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Code checkout
         uses: actions/checkout@v4
@@ -35,9 +32,7 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Build site
-        run: 
-          npm run build
-
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -51,8 +46,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-
-deploy-roadmap-placeholder:
+  deploy-roadmap-placeholder:
     if: false
     runs-on: ubuntu-latest
     steps:
