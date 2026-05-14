@@ -26,3 +26,7 @@ url for the SSh remote server project: https://roadmap.sh/projects/ssh-remote-se
 For the sixth project i created an EC2 instance and configured nginx on it created a simple website and used rsync to update this server and implemented a bash script that uses rsync to the website to the server.
 
 url for the static siteserver project https://roadmap.sh/projects/static-site-server
+
+For the seventh project i added a cname to my already purchased domain name from aws routed the trafic to my github page registered the new name in github pages and acquired the certificates.
+
+url for the basic dns setup project: https://roadmap.sh/projects/basic-dns
