@@ -1,8 +1,8 @@
 {
-  "name": "temp-theme",
-  "description": "Astrofy is a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create in minutes a website with Blog, CV, Project Section, Store and RSS Feed.",
+  "name": "ahmed-zahran-portfolio",
+  "description": "Professional SRE and Cloud DevOps Portfolio for Ahmed Zahran Ali",
   "type": "module",
-  "version": "3.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

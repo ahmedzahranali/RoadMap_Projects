@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: code checkout
+      - name: Code checkout
         uses: actions/checkout@v4
 
       - name: Setup Node
@@ -30,10 +30,13 @@ jobs:
         with: 
           node-version: '22'
 
-      - name: build site
+      - name: Build site
         run: |
           npm install
           npm run build
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
