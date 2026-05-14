@@ -7,12 +7,19 @@ const { sideBarActiveItemID } = Astro.props;
 
 <div class="drawer-side z-40">
   <label for="my-drawer" class="drawer-overlay"></label>
-  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
-    <div class="w-fit mx-auto mt-5 mb-6">
-      <a href="/">
-        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
-          <div class="w-[8.5rem]">
-            <Image class="mask mask-circle" format="webp" width={300} height={300} src="/profile.webp" alt="Profile image" />
+  <aside class="px-2 pt-10 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+    <div class="w-fit mx-auto mt-16 mb-10"> 
+      <a href="/RoadMap_Projects/">
+        <div class="avatar transition ease-in-out hover:scale-[105%] block m-auto">
+          <div class="w-[9.5rem] rounded-full ring ring-primary ring-offset-base-100 ring-offset-4">
+            <Image 
+              class="mask mask-circle" 
+              format="webp" 
+              width={300} 
+              height={300} 
+              src="/RoadMap_Projects/profile.webp" 
+              alt="Ahmed Zahran Ali" 
+            />
           </div>
         </div>
       </a>

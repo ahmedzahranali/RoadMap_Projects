@@ -2,18 +2,23 @@
 const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
+
+// Helper to add base path if the image is a local string path
+const displayImage = img?.startsWith('/') && !img?.startsWith('/RoadMap_Projects') 
+  ? `/RoadMap_Projects${img}` 
+  : img;
 ---
 
 <div
   class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
-  data-aos="fade-up" 
+  data-aos="fade-up"
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
       {
-        img && (
+        displayImage && (
           <Image
-            src={img}
+            src={displayImage}
             width={750}
             height={422}
             format="webp"
