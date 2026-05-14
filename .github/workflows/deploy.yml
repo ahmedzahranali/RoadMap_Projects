@@ -29,14 +29,15 @@ jobs:
         uses: actions/setup-node@v4
         with: 
           node-version: '22'
-
-      - name: Build site
-        run: |
-          npm install
-          npm run build
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install --legacy-peer-deps
+
+      - name: Build site
+        run: 
+          npm run build
+
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
