@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://ahmedzahranali.github.io',
-  base: '/RoadMap_Projects', // Matches your exact GitHub repo name
+  base: '/',
   integrations: [tailwind(), mdx(), sitemap()],
   output: 'static',
 });
