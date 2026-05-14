@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection, render } from "astro:content";
+import PostLayout from "../../layouts/PostLayout.astro";
+import createSlug from "../../lib/createSlug";
+
+export async function getStaticPaths() {
+  const postEntries = await getCollection("blog");
+  return postEntries.map((entry) => ({
+    // We use entry.id as a fallback to ensure 'slug' is never undefined
+    params: { slug: createSlug(entry.data.title, entry.id) || entry.id },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"blog">;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<PostLayout
+  title={entry.data.title}
+  description={entry.data.description}
+  pubDate={entry.data.pubDate}
+  heroImage={entry.data.heroImage}
+  updatedDate={entry.data.updatedDate}
+  badge={entry.data.badge}
+  tags={entry.data.tags}
+>
+  <Content />
+</PostLayout>

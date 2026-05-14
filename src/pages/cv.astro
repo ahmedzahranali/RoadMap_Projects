@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Professional Summary</div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    Fluent in English (C1) and proficient in orchestrating scalable environments. 
+    Proven ability to engineer zero-trust deployment pipelines and implement Infrastructure as Code (IaC) 
+    using Terraform and Kubernetes.
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Bachelor of Information Technology"
+      subtitle="2018 to 2022 at Faculty of Computers and Artificial Intelligence, Beni-suef, Egypt"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experience</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Cloud DevOps Intern"
+      subtitle="iVolve, Cairo, Egypt"
+    >
+      <ul class="list-disc ml-5 mb-4">
+        <li>Standardized application packaging using Gradle and Maven; engineered optimized multi-stage Dockerfiles for Spring Boot and Node.js microservices.</li>
+        <li>Designed automated Jenkins pipelines integrating unit testing, image scanning, and automated deployment.</li>
+        <li>Managed Kubernetes cluster resources and security via RBAC, resource quotas, and node taints.</li>
+        <li>Deployed and configured ArgoCD to manage GitOps workflows for automated environment synchronization.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Cloud DevOps Engineer Scholarship"
+      subtitle="National Telecommunication Institute (NTI), Cairo, Egypt"
+    >
+      <ul class="list-disc ml-5 mb-4">
+        <li>Automated management of Cisco, Juniper, and Arista network devices using Ansible playbooks.</li>
+        <li>Deployed containerized applications on Red Hat OpenShift using Helm for standardized releases.</li>
+      </ul>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Customer Service Agent"
+      subtitle="TTEC & Concentrix, Cairo, Egypt"
+    >
+      <ul class="list-disc ml-5 mb-4">
+        <li>Managed 100+ daily inquiries, resolving technical issues under SLA pressure.</li>
+        <li>Documented workflows and tracked performance metrics, developing process-oriented thinking for DevOps.</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <ul class="list-disc md:columns-2 columns-1 mx-6">
+    <li><b>Cloud:</b> AWS (S3, CloudFront, Lambda, DynamoDB)</li>
+    <li><b>Orchestration:</b> Kubernetes, Docker, OpenShift</li>
+    <li><b>IaC & Automation:</b> Terraform, Ansible, Jenkins, Git</li>
+    <li><b>OS & Security:</b> Red Hat Admin I/II, SELinux, Firewalls</li>
+    <li><b>Scripting:</b> Bash, Python, JavaScript (React)</li>
+    <li><b>Networking:</b> VLANs, SNMP, Cisco</li>
+    <li><b>Languages:</b> English (C1), Arabic (Native)</li>
+  </ul>
+</BaseLayout>

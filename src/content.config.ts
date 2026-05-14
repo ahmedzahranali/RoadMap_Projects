@@ -1,20 +1,40 @@
-import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
-import { z } from 'astro/zod';
+import { z, defineCollection } from "astro:content";
+import { glob } from "astro/loaders";
 
-const blog = defineCollection({
-	// Load Markdown and MDX files in the `src/content/blog/` directory.
-	loader: glob({ base: './src/content/blog', pattern: '**/*.{md,mdx}' }),
-	// Type-check frontmatter using a schema
-	schema: ({ image }) =>
-		z.object({
-			title: z.string(),
-			description: z.string(),
-			// Transform string to Date object
-			pubDate: z.coerce.date(),
-			updatedDate: z.coerce.date().optional(),
-			heroImage: z.optional(image()),
-		}),
+const blogSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    pubDate: z.coerce.date(),
+    updatedDate: z.string().optional(),
+    heroImage: z.string().optional(),
+    badge: z.string().optional(),
+    tags: z.array(z.string()).refine(items => new Set(items).size === items.length, {message: 'tags must be unique',}).optional(),});
+
+const storeSchema = z.object({
+    title: z.string(),
+    description: z.string(),
+    custom_link_label: z.string(),
+    custom_link: z.string().optional(),
+    updatedDate: z.coerce.date(),
+    pricing: z.string().optional(),
+    oldPricing: z.string().optional(),
+    badge: z.string().optional(),
+    checkoutUrl: z.string().optional(),
+    heroImage: z.string().optional(),
 });
 
-export const collections = { blog };
+export type BlogSchema = z.infer<typeof blogSchema>;
+export type StoreSchema = z.infer<typeof storeSchema>;
+
+// The old v5 declarations were deleted from here!
+
+export const collections = {
+    'blog': defineCollection({
+        loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/blog" }),
+        schema: blogSchema
+    }),
+    'store': defineCollection({
+        loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/store" }),
+        schema: storeSchema
+    })
+};
