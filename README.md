@@ -19,3 +19,6 @@ For the fourth project github pages deployment I created the deploy for github a
 
 url for the github pages deployment project: https://roadmap.sh/projects/github-actions-deployment-workflow
 
+For the fifth project SSH remote server i intialized an EC2 instance setup multi key configuration by creating the key on my local machine and then appending it in the remote file on the server, Had to restrict local private key permissions to prevent rejection, also gave the server i wanted to ssh intoa nickname, I also setup fail2ban to protect my server from attacks, configured a new jail.local file enabled sshd jail to monitor /var/log/auth.log.
+
+url for the SSh remote server project: https://roadmap.sh/projects/ssh-remote-server-setup
