@@ -3,9 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://ahmedzahranali.github.io',
+  site: 'https://portfolio.mydevopsresume.com',
   base: '/',
   integrations: [tailwind(), mdx(), sitemap()],
   output: 'static',
