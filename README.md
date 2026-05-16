@@ -30,3 +30,7 @@ url for the static siteserver project https://roadmap.sh/projects/static-site-se
 For the seventh project i added a cname to my already purchased domain name from aws routed the trafic to my github page registered the new name in github pages and acquired the certificates.
 
 url for the basic dns setup project: https://roadmap.sh/projects/basic-dns
+
+For the eightth project i installed netdata on my laptop (linux mint) configured the metrics accessed it through port 19999 on my browser added a chart for my portfolio website metrics setup an alarm for my cpu usage created the three scripts one for setup one for stress testing ad the last one for cleanup 
+
+url for the simple monitoring project: https://roadmap.sh/projects/simple-monitoring-dashboard 
