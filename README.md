@@ -34,3 +34,7 @@ url for the basic dns setup project: https://roadmap.sh/projects/basic-dns
 For the eightth project i installed netdata on my laptop (linux mint) configured the metrics accessed it through port 19999 on my browser added a chart for my portfolio website metrics setup an alarm for my cpu usage created the three scripts one for setup one for stress testing ad the last one for cleanup 
 
 url for the simple monitoring project: https://roadmap.sh/projects/simple-monitoring-dashboard 
+
+For the ninth project i created a dummy service that just printed out that it's running and that was by putting the script in my usr/local/bin/directory and then i put the .service fle for this service in the /etc/systemd/system directory and then reloaded the daemon and voila the service was running smoothly.
+
+url for the dummy systemd service: https://roadmap.sh/projects/dummy-systemd-service 
