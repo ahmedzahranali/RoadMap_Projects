@@ -41,4 +41,8 @@ url for the dummy systemd service: https://roadmap.sh/projects/dummy-systemd-ser
 
 For the tenth project i created a basic dockerfile that takes a parameter from the user and spits it out the docker file for it is at the root of my repo.
 
-url for the basic dockerfile project: https://roadmap.sh/projects/basic-dockerfile 
+url for the basic dockerfile project: https://roadmap.sh/projects/basic-dockerfile
+
+For the elventh project i launched an ec2 instance setup nginx on it and made it servce a static website and i can also setup so that me pipeline can deploy any changes in my code once i push it if a remove the if:false line from my deploy.yml file. 
+
+url for the ec instance poject:https://roadmap.sh/projects/ec2-instance
