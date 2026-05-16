@@ -37,4 +37,8 @@ url for the simple monitoring project: https://roadmap.sh/projects/simple-monito
 
 For the ninth project i created a dummy service that just printed out that it's running and that was by putting the script in my usr/local/bin/directory and then i put the .service fle for this service in the /etc/systemd/system directory and then reloaded the daemon and voila the service was running smoothly.
 
-url for the dummy systemd service: https://roadmap.sh/projects/dummy-systemd-service 
+url for the dummy systemd service: https://roadmap.sh/projects/dummy-systemd-service
+
+For the tenth project i created a basic dockerfile that takes a parameter from the user and spits it out the docker file for it is at the root of my repo.
+
+url for the basic dockerfile project: https://roadmap.sh/projects/basic-dockerfile 
