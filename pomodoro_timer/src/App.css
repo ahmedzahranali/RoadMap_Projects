@@ -1,0 +1,51 @@
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.theme-work { background-color: #ba4949; }
+.theme-short-break { background-color: #38858a; }
+.theme-long-break { background-color: #397097; }
+
+.container { text-align: center; width: 100%; max-width: 400px; padding: 20px; }
+
+.timer-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.timer-display {
+  font-size: 7rem;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+}
+
+.controls button {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: white;
+  color: #555;
+  margin: 10px;
+  transition: transform 0.1s ease;
+}
+
+.controls button:active { transform: translateY(2px); }
+
+.reset-btn {
+  background: transparent !important;
+  color: white !important;
+  border: 2px solid white !important;
+}

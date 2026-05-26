@@ -46,3 +46,7 @@ url for the basic dockerfile project: https://roadmap.sh/projects/basic-dockerfi
 For the elventh project i launched an ec2 instance setup nginx on it and made it servce a static website and i can also setup so that me pipeline can deploy any changes in my code once i push it if a remove the if:false line from my deploy.yml file. 
 
 url for the ec instance poject:https://roadmap.sh/projects/ec2-instance
+
+For the twelfth project i created the pomodoro tracker application using react and made sure to meet the required parameters the whole project is included in the pomodoro timer directory all it needs is to be deployed.
+
+url for the pomodoro timer project:https://roadmap.sh/projects/pomodoro-timer
