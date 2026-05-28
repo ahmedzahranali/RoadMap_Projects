@@ -1,0 +1,6 @@
+---
+- name: Add a public ssh key.
+  authorized_key:
+    user: "{{ ansible_user }}"
+    state: present
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEiJ6DMyD9FxNGYIdVfmVfS4mgZmFEmfSt8xNxdL9IJt ansible-sandbox"

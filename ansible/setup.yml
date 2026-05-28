@@ -1,0 +1,17 @@
+---
+- name: Configure the server.
+  hosts: webservers
+  gather_facts: yes
+
+  roles:
+    - role: base
+      tags: ['base', 'setup']
+
+    - role: nginx
+      tags: ['nginx', 'web']
+
+    - role: ssh
+      tags: ['ssh', 'security']
+
+    - role: app
+      tags: ['app', 'deploy']

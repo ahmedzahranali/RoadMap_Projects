@@ -50,3 +50,7 @@ url for the ec instance poject:https://roadmap.sh/projects/ec2-instance
 For the twelfth project i created the pomodoro tracker application using react and made sure to meet the required parameters the whole project is included in the pomodoro timer directory all it needs is to be deployed.
 
 url for the pomodoro timer project:https://roadmap.sh/projects/pomodoro-timer
+
+For the thirtenth project i created an ansible playbook with the base nginx app and ssh structure and enables it to pull up my pomodoro app from my repo and serve it using nginx i tested on a multipass machine and was able to serve the timer on my local host.
+
+url for the configuraton management project: https://roadmap.sh/projects/configuration-management

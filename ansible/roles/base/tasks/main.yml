@@ -1,0 +1,23 @@
+---
+- name: Update cache.
+  apt:
+    update_cache: yes
+    upgrade: dist
+  become: yes
+
+- name: Insall utilities and fail2ban.
+  apt: 
+     name:
+       - curl
+       - vim
+       - git
+       - fail2ban
+     state: present
+  become: yes
+
+- name: Make sure fail2ban is started.
+  service:
+    name: fail2ban
+    state: started
+    enabled: yes
+  become: yes

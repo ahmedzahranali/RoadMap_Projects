@@ -1,0 +1,69 @@
+---
+- name: Purge the default nginx directory.
+  file:
+    path: /var/www/html/
+    state: absent
+  become: yes
+
+- name: Create staging area
+  file:
+    path: /var/www/html/
+    state: absent
+  become: yes 
+
+- name: CLone the repo
+  git: 
+    repo: 'https://github.com/ahmedzahranali/RoadMap_Projects.git'
+    dest: /opt/roadmap_projects
+    version: main
+    force: yes
+  become: yes
+
+- name: Remove any old node.js packages
+  apt: 
+    name:
+      - nodejs
+      - npm
+      - libonde-dev
+      - nodejs-doc
+    state: absent
+    autoremove: yes
+  become: yes
+
+- name: Download NodeSource setup script
+  shell: curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+  become: yes
+
+- name: install modern Nodejs
+  apt: 
+    name: nodejs
+    state: latest
+    update_cache: yes
+  become: yes
+
+- name: Install NPM dependencies
+  command: npm install
+  args: 
+    chdir: /opt/roadmap_projects/pomodoro_timer
+  become: yes
+
+- name: Build react app using vite
+  command: npm run build
+  args:
+    chdir: /opt/roadmap_projects/pomodoro_timer
+  become: yes
+
+- name: Copy the compiled folder to nginx root
+  copy: 
+    src: /opt/roadmap_projects/pomodoro_timer/dist/
+    dest: /var/www/html/
+    remote_src: yes
+  become: yes
+
+- name: Set permissions for the directory.
+  file:
+    path: /var/www/html/
+    owner: www-data
+    group: www-data
+    recurse: yes
+  become: yes
