@@ -54,3 +54,7 @@ url for the pomodoro timer project:https://roadmap.sh/projects/pomodoro-timer
 For the thirtenth project i created an ansible playbook with the base nginx app and ssh structure and enables it to pull up my pomodoro app from my repo and serve it using nginx i tested on a multipass machine and was able to serve the timer on my local host.
 
 url for the configuraton management project: https://roadmap.sh/projects/configuration-management
+
+For the fourtenth project i applied IAC to aws using terraform and even setup ansible to take the public ID of the setup server and and run a simple playbook on it. 
+
+URL for IaC on Digital Ocean: https://roadmap.sh/projects/iac-digitalocean
