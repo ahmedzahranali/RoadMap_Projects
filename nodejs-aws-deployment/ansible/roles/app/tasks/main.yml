@@ -1,0 +1,57 @@
+---
+- name: Installing dependencies.
+  apt:
+    name: 
+    - nodejs
+    - npm
+    - git
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Clone the repo.
+  git:
+    repo: 'https://github.com/ahmedzahranali/RoadMap_Projects'
+    dest: /opt/roadmap_projects
+    version: main
+    force: yes
+  become: yes
+
+- name: Install npm dependencies.
+  command: npm install
+  args:
+    chdir: /opt/roadmap_projects/pomodoro_timer
+  become: yes
+
+- name: build the app
+  command: npm run build
+  args: 
+    chdir: /opt/roadmap_projects/pomodoro_timer
+  become: yes
+
+- name: Installing nginx 
+  apt:
+    name: nginx
+    state: present
+  become: yes
+
+- name: Remove default nginx directory
+  file:
+    path: /var/www/html/index.nginx-debian.html
+    state: absent
+  become: yes
+
+- name: Copy the compiled folder to nginx root
+  copy:
+    src: /opt/roadmap_projects/pomodoro_timer/build/
+    dest: /var/www/html/
+    remote_src: yes
+  become: yes
+
+- name: Set permissions
+  file:
+    path: /var/www/html/
+    owner: www-data
+    group: www-data
+    recurse: yes
+  become: yes

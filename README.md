@@ -58,3 +58,7 @@ url for the configuraton management project: https://roadmap.sh/projects/configu
 For the fourtenth project i applied IAC to aws using terraform and even setup ansible to take the public ID of the setup server and and run a simple playbook on it. 
 
 URL for IaC on Digital Ocean: https://roadmap.sh/projects/iac-digitalocean
+
+For the fiftenth project i used github actions to deploy a nodejs service while employing ansible to configure the server for me. 
+
+URL for Node.js Service Deployment: https://roadmap.sh/projects/nodejs-service-deployment

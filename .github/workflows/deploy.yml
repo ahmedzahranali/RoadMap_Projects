@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  deploy-pages:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -62,3 +62,31 @@ jobs:
           remote_host: ${{ secrets.EC2_IP }}
           remote_user: ec2-user
           remote_key: ${{ secrets.EC2_SSH_KEY }}
+  deploy-ansible:
+    name: Deploy to AWS via Ansible
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Install ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+
+      - name: Configure SSH Key and Known Hosts
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Run the playbook
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+        run: |
+          cd nodejs-aws-deployment/ansible
+
+          echo "[webserver]" > pipeline_inventory.ini
+          echo "$EC2_HOST ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_ed25519" >> pipeline_inventory.ini
+
