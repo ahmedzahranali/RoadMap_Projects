@@ -63,6 +63,7 @@ jobs:
           remote_user: ec2-user
           remote_key: ${{ secrets.EC2_SSH_KEY }}
   deploy-ansible:
+    if: false
     name: Deploy to AWS via Ansible
     runs-on: ubuntu-latest
     steps:

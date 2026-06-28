@@ -2,7 +2,7 @@
 title: "Breaking Down the Cloud Resume Challenge"
 description: "How I built a serverless, high-availability portfolio using AWS, Terraform, and GitHub Actions."
 pubDate: "May 14 2026"
-heroImage: "/post_img.webp"
+heroImage: "/images/cloud-resume-challenge.jpg"
 badge: "AWS & IaC"
 tags: ["AWS", "Terraform", "CI/CD", "SRE"]
 ---
