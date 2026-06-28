@@ -4,25 +4,20 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Professional Summary</div>
+  <div class="mb-5 flex justify-between items-center pr-2">
+    <div class="text-3xl w-full font-bold">Resume</div>
+    
+    <!-- Download PDF Button -->
+    <a href="/Ahmed_Zahran_Resume.pdf" download="Ahmed_Zahran_Resume.pdf" class="btn btn-outline btn-primary shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+      </svg>
+      Download PDF
+    </a>
   </div>
 
   <div class="mb-10 text-justify">
-    Fluent in English (C1) and proficient in orchestrating scalable environments. 
-    Proven ability to engineer zero-trust deployment pipelines and implement Infrastructure as Code (IaC) 
-    using Terraform and Kubernetes.
-  </div>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Education</div>
-  </div>
-
-  <div class="time-line-container grid gap-4 mb-10">
-    <TimeLineElement
-      title="Bachelor of Information Technology"
-      subtitle="2018 to 2022 at Faculty of Computers and Artificial Intelligence, Beni-suef, Egypt"
-    />
+    Emerging Cloud DevOps Engineer, certified as an AWS Solutions Architect and Cloud Practitioner, with a Bachelor's degree in Information Technology and hands-on expertise in cloud-native infrastructure[cite: 1]. Fluent in English (C1 level) and proficient in orchestrating scalable environments using Terraform, Kubernetes, and Docker[cite: 1]. Strong technical foundation in AWS serverless architectures, Linux system administration, and CI/CD automation[cite: 1]. Proven ability to engineer zero-trust deployment pipelines, implement Infrastructure as Code (IaC), and establish proactive observability to optimize and secure cloud operations[cite: 1].
   </div>
 
   <div class="mb-5">
@@ -32,46 +27,108 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   <div class="time-line-container mb-10">
     <TimeLineElement
       title="Cloud DevOps Intern"
-      subtitle="iVolve, Cairo, Egypt"
+      subtitle="iVolve"
     >
-      <ul class="list-disc ml-5 mb-4">
-        <li>Standardized application packaging using Gradle and Maven; engineered optimized multi-stage Dockerfiles for Spring Boot and Node.js microservices.</li>
-        <li>Designed automated Jenkins pipelines integrating unit testing, image scanning, and automated deployment.</li>
-        <li>Managed Kubernetes cluster resources and security via RBAC, resource quotas, and node taints.</li>
-        <li>Deployed and configured ArgoCD to manage GitOps workflows for automated environment synchronization.</li>
+      <ul class="list-disc list-inside mb-4 text-sm">
+        <li><strong>Build & Containerization:</strong> Standardized application packaging using Gradle and Maven and engineered optimized multi-stage Dockerfiles to containerize Spring Boot, Node.js, and Python microservices[cite: 1].</li>
+        <li><strong>Kubernetes Orchestration:</strong> Managed cluster resources and security by implementing RBAC, resource quotas, and node taints, while configuring persistent storage solutions and StatefulSets for database workloads[cite: 1].</li>
+        <li><strong>Continuous Integration:</strong> Designed automated Jenkins pipelines to streamline the software delivery lifecycle, integrating unit testing, image scanning, and automated deployment stages[cite: 1].</li>
+        <li><strong>GitOps Implementation:</strong> Deployed and configured ArgoCD to manage GitOps workflows, ensuring automated synchronization and consistency between Git repositories and Kubernetes cluster states[cite: 1].</li>
+        <li><strong>Infrastructure Automation:</strong> Developed Ansible playbooks to automate server configuration and application deployment, utilizing Ansible Vault for secret management and dynamic inventory for AWS EC2 instance discovery[cite: 1].</li>
       </ul>
     </TimeLineElement>
+    
     <TimeLineElement
       title="Cloud DevOps Engineer Scholarship"
-      subtitle="National Telecommunication Institute (NTI), Cairo, Egypt"
+      subtitle="National Telecommunication Institute (NTI)"
     >
-      <ul class="list-disc ml-5 mb-4">
-        <li>Automated management of Cisco, Juniper, and Arista network devices using Ansible playbooks.</li>
-        <li>Deployed containerized applications on Red Hat OpenShift using Helm for standardized releases.</li>
+      <ul class="list-disc list-inside mb-4 text-sm">
+        <li>Gained hands-on experience in network automation, cloud deployment, and infrastructure as code within an intensive DevOps training environment[cite: 1].</li>
+        <li>Automated configuration and management of Cisco, Juniper, and Arista network devices using Ansible playbooks, including VLAN provisioning and SNMP monitoring[cite: 1].</li>
+        <li>Deployed and managed containerized applications on Red Hat OpenShift using Helm and source-to-image workflows, handling cluster resources, nodes, and access controls[cite: 1].</li>
+        <li>Designed and executed automated infrastructure test cases using Robot Framework to validate network and system deployments[cite: 1].</li>
+        <li>Strengthened Linux system administration skills through practical work with Red Hat Linux, SELinux policies, firewalls, LVM, and file systems[cite: 1].</li>
       </ul>
     </TimeLineElement>
+
     <TimeLineElement
       title="Customer Service Agent"
-      subtitle="TTEC & Concentrix, Cairo, Egypt"
+      subtitle="TTEC & Concentrix – Cairo, Egypt"
     >
-      <ul class="list-disc ml-5 mb-4">
-        <li>Managed 100+ daily inquiries, resolving technical issues under SLA pressure.</li>
-        <li>Documented workflows and tracked performance metrics, developing process-oriented thinking for DevOps.</li>
+      <ul class="list-disc list-inside mb-4 text-sm">
+        <li>Managed 100+ daily customer inquiries in high-volume call center environments while consistently meeting service-level agreements (SLAs)[cite: 1].</li>
+        <li>Resolved technical and account-related issues efficiently under time pressure, demonstrating strong problem-solving and communication skills[cite: 1].</li>
+        <li>Documented workflows and tracked performance metrics, reinforcing attention to detail and process-oriented thinking applicable to DevOps operations[cite: 1].</li>
+        <li>Collaborated with cross-functional teams to meet operational targets, developing teamwork and reliability essential for production environments[cite: 1].</li>
       </ul>
     </TimeLineElement>
+
+    <TimeLineElement
+      title="Front-End Web Development"
+      subtitle="Route Academy – Cairo, Egypt"
+    >
+      <ul class="list-disc list-inside text-sm">
+        <li>Developed responsive web applications using React and JavaScript, consuming RESTful APIs to build dynamic user interfaces[cite: 1].</li>
+        <li>Implemented debugging, testing, and deployment practices, establishing a strong foundation for automation and CI/CD concepts[cite: 1].</li>
+        <li>Gained practical experience in version control and collaborative development workflows[cite: 1].</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Technical Projects</div>
+  </div>
+  
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Cloud Resume Challenge (Serverless AWS Architecture & CI/CD)"
+      subtitle="Personal Project"
+    >
+      <ul class="list-disc list-inside text-sm">
+        <li>Engineered a zero-trust CI/CD pipeline using GitHub Actions and AWS OIDC, eliminating the reliance on long-lived static credentials for automated infrastructure deployments[cite: 1].</li>
+        <li>Codified cloud infrastructure (S3, Lambda, CloudFront) utilizing Terraform with remote state management, ensuring a highly available, version-controlled cloud architecture[cite: 1].</li>
+        <li>Enforced automated quality gates within the deployment pipeline, executing Python unit tests and Terraform syntax validation on every commit before production rollout[cite: 1].</li>
+        <li>Implemented proactive observability by provisioning AWS CloudWatch metric alarms and SNS email notifications via IaC to monitor serverless compute health in real-time[cite: 1].</li>
+      </ul>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Bachelor of Information Technology"
+      subtitle="Faculty of Computers and Artificial Intelligence, Beni-suef, Egypt[cite: 1] | Graduation: 2022[cite: 1]"
+    />
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Certifications</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="AWS Certified Solutions Architect – Associate"
+      subtitle="Issued June 2026 by Amazon Web Services (AWS)"
+    />
+    <TimeLineElement
+      title="AWS Certified Cloud Practitioner"
+      subtitle="Issued June 2026 by Amazon Web Services (AWS)"
+    />
   </div>
 
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
-  <ul class="list-disc md:columns-2 columns-1 mx-6">
-    <li><b>Cloud:</b> AWS (S3, CloudFront, Lambda, DynamoDB)</li>
-    <li><b>Orchestration:</b> Kubernetes, Docker, OpenShift</li>
-    <li><b>IaC & Automation:</b> Terraform, Ansible, Jenkins, Git</li>
-    <li><b>OS & Security:</b> Red Hat Admin I/II, SELinux, Firewalls</li>
-    <li><b>Scripting:</b> Bash, Python, JavaScript (React)</li>
-    <li><b>Networking:</b> VLANs, SNMP, Cisco</li>
-    <li><b>Languages:</b> English (C1), Arabic (Native)</li>
+  <ul class="list-disc md:columns-2 columns-1 mx-6 mb-10 text-sm">
+    <li><strong>OS & Security:</strong> Linux Administration (Red Hat Admin I/II, SELinux, Firewalls, LVM)[cite: 1].</li>
+    <li><strong>Automation & Scripting:</strong> Python, Ansible, Shell Scripting, Git[cite: 1].</li>
+    <li><strong>Networking Foundations:</strong> VLANs, SNMP, Cisco[cite: 1].</li>
+    <li><strong>Cloud & Orchestration:</strong> AWS (Core Services/Security), Terraform, Kubernetes, Docker, Red Hat OpenShift[cite: 1].</li>
+    <li><strong>Development & APIs:</strong> REST/HTTPS APIs, React/JavaScript[cite: 1].</li>
+    <li><strong>Languages & Communication:</strong> Arabic (Native), English (Fluent / C1)[cite: 1].</li>
   </ul>
 </BaseLayout>
