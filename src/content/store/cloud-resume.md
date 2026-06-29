@@ -4,6 +4,7 @@ description: "Engineered a zero-trust CI/CD pipeline using GitHub Actions, AWS O
 heroImage: "/images/cloud-resume-challenge.jpg"
 pubDate: "Jun 30 2026"
 badge: "AWS / CI/CD"
+custom_link_label: "View Project"
 ---
 
 I built this project to codify my cloud infrastructure utilizing Terraform with remote state management, ensuring a highly available, version-controlled cloud architecture.
