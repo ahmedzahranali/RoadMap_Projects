@@ -6,7 +6,9 @@ heroImage: "/images/cloud-resume-challenge.jpg"
 badge: "AWS & IaC"
 tags: ["AWS", "Terraform", "CI/CD", "SRE"]
 ---
+## The site's URL and idea
 
+mydevopsresume.com
 Building a resume is one thing; engineering a globally distributed, serverless infrastructure to host it is another. For my **Cloud Resume Challenge**, I moved beyond manual configuration to treat my portfolio as a production-grade environment.
 
 ## The Architecture Stack
@@ -32,4 +34,5 @@ Efficiency in DevOps is about automation. I implemented **GitHub Actions** to ha
 * **Infrastructure Pipeline:** Runs `terraform plan` and `terraform apply` automatically, ensuring the live environment matches the code.
 
 ## Lessons Learned
+
 This project reinforced the importance of **proactive observability**. By provisioning **CloudWatch** metric alarms and **SNS** notifications, I can monitor the health of my serverless compute in real-time, ensuring that my portfolio is always reachable for recruiters and collaborators.

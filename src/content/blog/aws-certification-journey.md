@@ -7,7 +7,7 @@ badge: "Milestone"
 tags: ["AWS", "DevOps", "Cloud Architecture", "Certifications"]
 ---
 
-I was able to acwuire  **AWS Certified Solutions Architect – Associate (SAA-C03)** and **AWS Certified Cloud Practitioner** certifications this month!
+I was able to acquire  **AWS Certified Solutions Architect – Associate (SAA-C03)** and **AWS Certified Cloud Practitioner** certifications this month!
 
 I was able to achieve this after finishing stephane maarek's SAA course on udemy
 
