@@ -3,6 +3,7 @@ title: "Cloud Resume Challenge"
 description: "Engineered a zero-trust CI/CD pipeline using GitHub Actions, AWS OIDC, and Terraform to deploy serverless infrastructure."
 heroImage: "/images/cloud-resume-challenge.jpg"
 pubDate: "Jun 30 2026"
+updatedDate: "Jun 30 2026"
 badge: "AWS / CI/CD"
 custom_link_label: "View Project"
 ---
